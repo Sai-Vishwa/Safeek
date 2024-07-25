@@ -1,0 +1,10 @@
+import express from 'express';
+import Userservice from '../Service/Userservice.js';
+const Usercontroller=express.Router();
+Usercontroller.post('/mentor',Userservice.create_mentor);
+Usercontroller.post('/student',Userservice.create_student);
+Usercontroller.post('/assign',Userservice.assigning_mentor);
+Usercontroller.put('/change',Userservice.changing_mentor);
+Usercontroller.get('/get_mentor',Userservice.new_mentor);
+Usercontroller.get('/old_mentor',Userservice.old_mentor);
+export default Usercontroller;
